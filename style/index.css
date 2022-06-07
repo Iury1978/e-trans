@@ -1,0 +1,139 @@
+@font-face {
+  font-family: Inter;
+  src: url(../fonts/inter_cyrillic-regular.woff2) format('woff2'),
+    url(../fonts/inter_cyrillic-regular.woff) format('woff');
+  font-display: swap;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(../fonts/inter_cyrillic-700.woff2) format('woff2'),
+    url(../fonts/inter_cyrillic-700.woff) format('woff');
+  font-display: swap;
+  font-weight: 700;
+}
+
+:root {
+  --green-bright: #B8FF20;
+  --black: #18171A;
+  --grey: #C0C0C0;
+  --green: #CDF478;
+  --white: #FFFFFF;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--black);
+}
+
+h1, h2, h3, p, ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+input, button, textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img, svg {
+  display: block;
+  max-height: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: calc(1180px + 72px + 72px);
+  margin: 0 auto;
+  padding: 0 72px;
+}
+
+/* header */
+
+.header {
+  padding: 20px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: var(--white);
+}
+
+.header__container {
+  display: grid;
+  grid-template-columns: 3fr 6fr 3fr;
+  align-items: center;
+  gap: 15px;
+}
+
+.header__link-phone {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: var(--green-bright);
+  transition: color 0.3s ease-in-out;
+}
+
+.header__phone-number {
+  color: var(--white);
+  transition: color 0.3s ease-in-out;
+}
+
+.header__link-phone:hover,
+.header__link-phone:hover .header__phone-number {
+  color: var(--green);
+}
+
+.navigation__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.navigation__item {
+  transition: color 0.3s ease-in-out;
+}
+
+.navigation__item:hover {
+  color: var(--green);
+}
+
+/* main */
+.hero {
+  background-image: url('../img/background.jpg');
+  background-size: cover;
+  background-position: center;
+  padding-top: 220px;
+  padding-bottom: 120px;
+  color: var(--white);
+}
